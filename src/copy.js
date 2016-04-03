@@ -13,7 +13,7 @@ function setDir(options) {
                         options.onError
                     }
 
-                    options.onEnd(location);
+                    options.onEnd(dir, location);
                 });
             }
         };
