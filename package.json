@@ -1,0 +1,22 @@
+{
+  "name": "copy-drive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannyrich/copy-drive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannyrich/copy-drive/issues"
+  },
+  "homepage": "https://github.com/dannyrich/copy-drive",
+  "dependencies": {
+    "fs-extra": "^0.26.7"
+  }
+}
