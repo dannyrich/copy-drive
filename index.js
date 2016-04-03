@@ -17,20 +17,20 @@ function getDateString() {
     return new Date().getDate();
 }
 
-function getFolderName(dr) {
-    const parse = path.parse(dr);
-
-    if (dr.name !== 'Recovery HD') {
-        return path.join(BASE_DIR, `${dr.name} - ${getDateString()}`);
+function getFolderNames(dr) {
+    if (dr !== 'Recovery HD') {
+        return {
+            in: path.join(path.sep, 'Volumes', dr),
+            out: path.join(BASE_DIR, `${dr} - ${getDateString()}`);
     }
 }
 
 drive.watch((dr) => {
-    const location = getFolderName();
+    const location = getFolderNames();
     console.log(`Found ${location}`);
 
     if (location) {
-        copy.dir(dir).to(getFolderName());
+        copy.dir(location.in).to(location.out);
     }
 });
 
