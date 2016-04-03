@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dannyrich/copy-drive",
   "dependencies": {
+    "drive-watch": "^0.3.0",
     "fs-extra": "^0.26.7"
   }
 }
