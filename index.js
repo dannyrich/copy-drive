@@ -2,7 +2,6 @@
 
 const drive = require('./src/drive');
 const Copy = require('./src/copy');
-const progress = require('./src/progress');
 
 const path = require('path');
 
