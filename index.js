@@ -13,6 +13,10 @@ const copy = Copy({
     onError: onError
 });
 
+function getDateString() {
+    return new Date().getDate();
+}
+
 function getFolderName(dr) {
     const parse = path.parse(dr);
 
