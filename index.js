@@ -21,7 +21,7 @@ function getFolderNames(dr) {
     if (dr !== 'Recovery HD') {
         return {
             in: path.join(path.sep, 'Volumes', dr),
-            out: path.join(BASE_DIR, `${dr} - ${getDateString()}`);
+            out: path.join(BASE_DIR, `${dr} - ${getDateString()}`)
     }
 }
 
