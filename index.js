@@ -14,10 +14,11 @@ const copy = Copy({
 });
 
 function getDateString() {
-    return new Date().getDate();
+    return new Date().getTime();
 }
 
 function getFolderNames(dr) {
+    console.log(`Getting folder names for ${dr}`);
     if (dr !== 'Recovery HD') {
         return {
             in: path.join(path.sep, 'Volumes', dr),
@@ -27,7 +28,7 @@ function getFolderNames(dr) {
 }
 
 drive.watch((dr) => {
-    const location = getFolderNames();
+    const location = getFolderNames(dr);
     console.log(`Found ${location}`);
 
     if (location) {
